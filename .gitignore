@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+.vercel
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# DB
+*.db
+postgres_data/
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
