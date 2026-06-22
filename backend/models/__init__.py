@@ -4,12 +4,14 @@ from datetime import datetime
 
 Base = declarative_base()
 
+
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     email = Column(String, unique=True, index=True)
     password_hash = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
+
 
 class Document(Base):
     __tablename__ = "documents"
@@ -19,6 +21,7 @@ class Document(Base):
     s3_key = Column(String)
     upload_date = Column(DateTime, default=datetime.utcnow)
     status = Column(String, default="processing")
+
 
 class Extraction(Base):
     __tablename__ = "extractions"
