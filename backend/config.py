@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
+from dotenv import load_dotenv
 
-# Simple config - no dotenv complexity
+load_dotenv(dotenv_path=Path(__file__).parent / ".env")
+
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql://invoiceai_user:secure_password@localhost:5432/invoiceai"
@@ -14,5 +17,5 @@ AWS_BUCKET = os.getenv("AWS_BUCKET", "invoiceai-bucket")
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-here")
 ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
 
-print(f"✅ Environment: {ENVIRONMENT}")
-print(f"✅ Database: {DATABASE_URL[:50]}..." if DATABASE_URL else "❌ No database")
+print(f"[OK] Environment: {ENVIRONMENT}")
+print(f"[OK] Database: {DATABASE_URL[:50]}..." if DATABASE_URL else "[ERR] No database")

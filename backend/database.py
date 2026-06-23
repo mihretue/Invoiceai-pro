@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from config import DATABASE_URL
 
-print(f"🔌 Connecting to: {DATABASE_URL[:60]}...")
+print(f"[DB] Connecting to: {DATABASE_URL[:60]}...")
 
 # Create engine
 try:
@@ -11,9 +11,9 @@ try:
         echo=False,
         connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
     )
-    print("✅ Database engine created")
+    print("[OK] Database engine created")
 except Exception as e:
-    print(f"❌ Database error: {e}")
+    print(f"[ERR] Database error: {e}")
     raise
 
 # Create session
@@ -31,7 +31,7 @@ def init_db():
     from models import Base
     try:
         Base.metadata.create_all(bind=engine)
-        print("✅ Database tables created")
+        print("[OK] Database tables created")
     except Exception as e:
-        print(f"❌ Table creation error: {e}")
+        print(f"[ERR] Table creation error: {e}")
         raise
