@@ -11,9 +11,9 @@ DATABASE_URL = os.getenv(
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "sk-test")
-AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY", "")
-AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY", "")
-AWS_BUCKET = os.getenv("AWS_BUCKET", "invoiceai-bucket")
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME", "")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY", "")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "")
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-here")
 ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
 

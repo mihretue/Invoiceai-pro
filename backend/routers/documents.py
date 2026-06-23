@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from models import User, Document, Extraction
 from schemas import DocumentResponse
-from services.s3_service import upload_file, delete_file
+from services.cloudinary_service import upload_file, delete_file
 from dependencies import get_current_user
 from celery_app import extract_invoice as queue_extraction
 
