@@ -6,7 +6,6 @@ __pycache__/
 .Python
 venv/
 env/
-.env
 *.egg-info/
 dist/
 build/
@@ -34,3 +33,4 @@ branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
 .gitignore
+config.bat
