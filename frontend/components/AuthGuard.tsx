@@ -1,7 +1,7 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { getAuthToken } from '@/lib/api';
+"use client";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { getAuthToken } from "@/lib/api";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -9,7 +9,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!getAuthToken()) {
-      router.replace('/login');
+      router.replace("/login");
     } else {
       setReady(true);
     }
