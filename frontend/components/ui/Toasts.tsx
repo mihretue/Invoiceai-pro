@@ -1,7 +1,11 @@
 'use client';
 import { useEffect } from 'react';
 import Icon from '../Icon';
-import { ToastItem } from '@/lib/context';
+interface ToastItem {
+  id: number;
+  msg: string;
+  type: 'success' | 'error' | 'info';
+}
 
 const TYPE_ICON: Record<string, string> = { success: 'checkCircle', error: 'xCircle', info: 'info' };
 
